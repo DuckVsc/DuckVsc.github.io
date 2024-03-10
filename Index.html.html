@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Layout</title>
+<link rel="icon" href="https://cdn.discordapp.com/attachments/1216200142298812486/1216420848550809660/favicon.ico?ex=66005332&is=65edde32&hm=710f06313684408b94dbc32648ce965bbcb9eaab00b596e71785c2375464a3b5&" type="image/x-icon">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0; /* Fallback background color */
+    }
+
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: url('https://cdn.discordapp.com/attachments/1216200142298812486/1216405886063476746/last_ned.png?ex=66004542&is=65edd042&hm=f60117d85e5ce1736027df6ba2593896f501c16ea261abdb9e23e20c7fd63c32&'); /* URL of the backdrop image */
+        background-size: cover;
+        background-position: center;
+        opacity: 1; /* Adjust the opacity of the backdrop */
+    }
+
+    .logo-container {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 150px; /* 5% bigger */
+        height: 150px; /* 5% bigger */
+        border-radius: 50%; /* Make it round */
+        border: 2px solid black; /* Add black border */
+        overflow: hidden; /* Clip the image within the circle */
+        z-index: 2;
+    }
+
+    .logo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the entire circle */
+    }
+
+    .button-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5cm; /* Adjust the gap between buttons */
+        z-index: 2;
+    }
+
+    .button {
+        position: relative;
+        width: 100px; /* Adjust the width of the buttons in pixels */
+        height: 50px; /* Adjust the height of the buttons in pixels */
+        text-align: center;
+        line-height: 50px; /* Line height should match the height of the button */
+        background-color: #1c4f8100; /* Adjust button color as needed */
+        color: red; /* Adjust text color as needed */
+        font-size: 18px;
+        font-weight: bold; /* Make text bold */
+        text-decoration: none;
+        border: 2px solid rgb(139, 42, 42); /* Add a black outline */
+        border-radius: 5px;
+        overflow: hidden;
+        transition: opacity 0.3s ease; /* Add transition for opacity */
+    }
+
+    .button:hover {
+        opacity: 0.7; /* Adjust opacity on hover */
+        transform: translateY(5px); /* Adjust the hover effect */
+    }
+</style>
+</head>
+<body>
+
+<div class="backdrop"></div>
+
+<div class="logo-container">
+    <img src="https://media.discordapp.net/attachments/1216200142298812486/1216420092464594955/apple-touch-icon.png?ex=6600527e&is=65eddd7e&hm=07fcd62a1bfd7641b67f175d1f41cc30670a84ad0742e2338ee602a0e58d27c3&format=webp&quality=lossless&" alt="Logo">
+</div>
+
+<div class="button-container">
+    <a class="button" href="https://georgetoons.stream/" target="_blank">Georgetoons</a>
+    <a class="button" href="https://zoechip.cc/" target="_blank">zoechip</a>
+    <a class="button" href="https://movies2watch.tv/" target="_blank">movies2watch</a>
+    <a class="button" href="https://dopebox.to/" target="_blank">Dopebox</a>
+    <a class="button" href="https://swatchseries.is/movie" target="_blank">swatchseries</a>
+    <a class="button" href="https://www.lookmovie2.to/" target="_blank">lookmovie2</a>
+    <a class="button" href="https://ww5.solarmovie.to/" target="_blank">solarmovie</a>
+    <a class="button" href="https://moviesjoy.is/" target="_blank">moviesjoy</a>
+    <a class="button" href="https://fmovies2.me/" target="_blank">fmovies</a>
+</div>
+
+</body>
+</html>
